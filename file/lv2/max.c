@@ -7,19 +7,19 @@ int max(int* tab, unsigned int len)
         return (0);
     }
     unsigned int i = 1;
-    int large = tab[0];
-
+    int larg = tab[0];
 
     while (i < len)
     {
-        if (tab[i] > large)
+        if (tab[i] > larg)
         {
-            large = tab[i];
+            larg = tab[i];
         }
         i++;
     }
-    return (large);
+    return(larg);
 }
+
 int main ()
 {
     int tab[] = {5,1,4,7,3,9};

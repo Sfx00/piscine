@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int lent(int nbr)
+int lent(long nbr)
 {
     int len = 0;
 
@@ -21,12 +21,11 @@ int lent(int nbr)
 
 char	*ft_itoa(int nbr)
 {
-    long n;
+    long n = nbr;
     int i;
     char* str;
 
-    i = lent(nbr);
-    n = nbr;
+    i = lent(n);
     
     if (!(str =(char *)malloc(i + 1)))
     {
@@ -53,5 +52,5 @@ char	*ft_itoa(int nbr)
 }
 int	main(void)
 {
-	printf("%s\n", ft_itoa(2147483647));
+	printf("%s\n", ft_itoa(-2147483648));
 }
